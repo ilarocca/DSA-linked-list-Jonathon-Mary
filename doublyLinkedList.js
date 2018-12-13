@@ -45,6 +45,10 @@ class LinkedList {
   }
 
   printList(){
+    if(this.isEmpty()){
+      console.log('list is empty');
+      return;
+    }
     let currentNode = this.head;
     let nodeString = this.head.previous + ' <- ';
     while(currentNode !== null){
@@ -55,6 +59,10 @@ class LinkedList {
   }
 
   printListFromEnd(){
+    if(this.isEmpty()){
+      console.log('list is empty');
+      return;
+    }
     let currentNode = this.head;
     while(currentNode.next !== null){
       currentNode = currentNode.next;
@@ -96,7 +104,7 @@ class LinkedList {
 }
 
 const linkedList = new LinkedList();
-for(let i = 0; i < 10; i++){
+for(let i = 0; i < 5; i++){
   linkedList.insertAtTail(i);
 }
 linkedList.printList();

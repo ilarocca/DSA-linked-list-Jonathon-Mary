@@ -71,9 +71,7 @@ class LinkedList {
     }
     return false;
   }
-
-
-
+  
   insertAfter(key, data){
     if(this.isEmpty()){
       console.log('list is empty');
@@ -93,6 +91,10 @@ class LinkedList {
   }
   
   printList(){
+    if(this.isEmpty()){
+      console.log('list is empty');
+      return;
+    }
     let currentNode = this.head;
     let nodeString = '';
     while(currentNode !== null){
